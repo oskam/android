@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.magdalena.hangman.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/hangman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_widthPercent="40%"/>
+
+    <TextView
+        android:id="@+id/the_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="20%"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:text="@string/debug_word"
+        android:letterSpacing="0.2"
+        android:layout_toEndOf="@+id/hangman"/>
+
+    <GridView
+        android:id="@+id/keyboard"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_toEndOf="@id/hangman"
+        android:layout_below="@+id/the_word"
+        android:numColumns="7"
+        android:columnWidth="90dp"
+        android:verticalSpacing="4dp"
+        android:horizontalSpacing="4dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        >
+    </GridView>
+
+
+</android.support.percent.PercentRelativeLayout>
